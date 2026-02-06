@@ -34,7 +34,7 @@ metadata:
   region: us-east-1
 
 managedNodeGroups:
-  - name: spot
+  - name: ondemand
     instanceType: t3.medium
     desiredCapacity: 2
     minSize: 1
