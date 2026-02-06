@@ -12,6 +12,20 @@
 #     spot: true
 
 
+# apiVersion: eksctl.io/v1alpha5
+# kind: ClusterConfig
+
+# metadata:
+#   name: my-cluster
+#   region: us-east-1
+
+# managedNodeGroups:
+#   - name: spot
+#     instanceTypes: ["m5.large", "m5a.large", "t3.large"]
+#     desiredCapacity: 3
+#     capacityType: SPOT
+
+
 apiVersion: eksctl.io/v1alpha5
 kind: ClusterConfig
 
@@ -21,6 +35,8 @@ metadata:
 
 managedNodeGroups:
   - name: spot
-    instanceTypes: ["m5.large", "m5a.large", "t3.large"]
-    desiredCapacity: 3
-    capacityType: SPOT
+    instanceType: t3.medium
+    desiredCapacity: 2
+    minSize: 1
+    maxSize: 3
+    spot: true
