@@ -26,6 +26,18 @@
 #     capacityType: SPOT
 
 
+# apiVersion: eksctl.io/v1alpha5
+# kind: ClusterConfig
+
+# metadata:
+#   name: my-cluster
+#   region: us-east-1
+
+# managedNodeGroups:
+#   - name: ondemand
+#     instanceType: t3.micro
+#     desiredCapacity: 2
+
 apiVersion: eksctl.io/v1alpha5
 kind: ClusterConfig
 
@@ -34,6 +46,11 @@ metadata:
   region: us-east-1
 
 managedNodeGroups:
-  - name: ondemand
-    instanceType: t3.micro
+  - name: spot
+    capacityType: SPOT
+    instanceTypes:
+      - t3.small
+      - t3.medium
     desiredCapacity: 2
+    minSize: 1
+    maxSize: 4
