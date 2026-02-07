@@ -47,10 +47,8 @@ metadata:
 
 managedNodeGroups:
   - name: spot
-    capacityType: SPOT
-    instanceTypes:
-      - t3.small
-      - t3.medium
+    instanceType: t3.medium
     desiredCapacity: 2
     minSize: 1
     maxSize: 4
+    spot: true
