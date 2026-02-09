@@ -9,13 +9,13 @@ terraform {
   backend "s3" {
     bucket = "nanda3sa"
     key    = "eksctl"
-    region = "us-east-1"
+    region = "eu-west-2"
     dynamodb_table = "nandadb"
   }
 }
 
 # Configure the AWS Provider
 provider "aws" {
-  region = "us-east-1"
+  region = "eu-west-2"
 }
 

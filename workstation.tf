@@ -7,7 +7,7 @@ module "ec2_instance" {
 #   key_name               = "user1"
 #   monitoring             = true
   vpc_security_group_ids = [aws_security_group.allow_eksctl.id]
-  subnet_id              = "subnet-0929e189892e88609"
+  subnet_id              = "subnet-0481587b89d7bb24d"
   user_data = file("workstation.sh")
   tags = {
     Terraform   = "true"
