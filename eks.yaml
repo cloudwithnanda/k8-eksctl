@@ -22,6 +22,6 @@ metadata:
 managedNodeGroups:
   - name: ondemand
     instanceType: m7i-flex.large
-    desiredCapacity: 2
+    desiredCapacity: 1
     minSize: 1
     maxSize: 4
