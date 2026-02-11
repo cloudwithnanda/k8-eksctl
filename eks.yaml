@@ -17,11 +17,10 @@ kind: ClusterConfig
 
 metadata:
   name: learn-eks
-  region: eu-west-2
-
+  region: us-east-1
 managedNodeGroups:
   - name: ondemand
-    instanceType: m7i-flex.large
-    desiredCapacity: 1
+    instanceType: t3.small
+    desiredCapacity: 3
     minSize: 1
     maxSize: 4
